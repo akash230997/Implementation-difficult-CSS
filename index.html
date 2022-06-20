@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 5 Document</title>
+    <style>
+        body{
+            margin: 0%;
+            /* background-color: rgba(128, 128, 128, 0.287); */
+            background-image: url(https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/tools1.png);
+        }
+        .masterhead{
+            /* height: calc(100vh - 10px); */
+            background-color: rgba(128, 128, 128, 0.349);
+        }
+        .btn{
+            width: 10%;
+            height: 50px;
+            padding: 10px;
+            margin:50px 45%;
+            background-color: yellow;
+            color:teal;
+            font-size:1rem;
+            /* font-weight: bold; */
+            transition: all 0.5s ease-in-out;
+            border-radius: 20px;
+        }
+        .btn:hover{
+            border: none;
+            color: white;
+            width: 200px;
+            height: 200px;
+            padding: 40px;
+            font-size: 22px;
+            border-radius: 50%;
+            background-color: rgba(28, 78, 226, 0.365);
+        }
+        h1{
+            margin-top: 0;
+            /* border: 1px solid #000; */
+            color: rgb(240, 240, 31);
+            font-size: 4rem;
+            padding-top: 100px;
+            animation: alternate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-name: hello;
+        }
+        @keyframes hello{
+            0%{
+                color: blue;
+            }
+            10%{
+                color:brown;
+            }
+            20%{
+                color:rgb(44, 165, 42);
+            }
+            30%{
+                color:rgb(187, 49, 28);
+            }
+            40%{
+                color:rgb(212, 181, 6);
+            }
+            50%{
+                color:rgb(234, 7, 215);
+            }
+            60%{
+                color:rgb(1, 7, 2);
+            }
+        }
+        h1:hover{
+            color: red;
+        }
+        
+        header{
+            /* border: 3px solid #000; */
+            width: calc(100% - 6px);
+            height: 80px;
+            background-color: rgba(10, 97, 227, 0.415);
+        }
+        header img{
+            /* border: 3px solid #000; */
+            display: inline-block;
+            /* border-radius: 50%;
+            width: 70px;
+            height: 70px; */
+            margin-top: 2px;
+            margin-left: 0px;
+            cursor: pointer;
+        }
+        .navbar{
+            float: right;
+            /* border: 1px solid #000; */
+            margin-right: 20px;
+        }
+        .navbar ul li {
+            padding: 15px;
+            display: inline-block;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+        }
+        .navbar li a:hover{
+            color: white;
+        }
+        .cards{
+            /* margin: 0px 25%; */
+            width: 100%;
+            min-height: 500px;
+            /* border: 2px solid #000; */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 255, 0.117);
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .box{
+            border-radius: 20px;
+            width: 300px;
+            height: 400px;
+            border: 1px dashed #000;
+            box-shadow: 2px 5px 3px rgb(111, 111, 107) ;
+            background-color: rgba(128, 128, 128, 0.567);
+            margin-top: 50px;
+            color: white;
+            text-align: center;
+            line-height: 6;
+            font-size: 2rem;
+            transition-duration: 2s;
+            transition-property: font-size  line-height;
+        }
+        .box:hover{
+            font-size: 3rem;
+            line-height: 2;
+            color: rgb(80, 80, 77);
+            background-color: darkgray;
+        }
+        .btn2{
+            padding: 15px;
+            width: 10%;
+            background-color: rgba(16, 104, 228, 0.818);
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            line-height: 1;
+            cursor:pointer;
+            margin-left: 320px;
+            margin-bottom: 40px;
+        }
+        .btn3{
+            padding: 15px;
+            width: 10%;
+            background-color: rgba(135, 195, 62, 0.996);
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            line-height: 1;
+            cursor:pointer;
+            margin-bottom: 40px;
+        }
+        #main{
+            width: 100%;
+            background-color: rgba(0, 0, 139, 0.12);
+            border-radius: 2px;
+            /* border: 3px solid #000; */
+        }
+        .immg {
+            margin: 40px 320px;
+            border-radius: 20px;
+        }
+        .immg2{
+            display: none;
+        }
+        #flexcheck{
+            width: 100%;
+
+            height: 500px;
+            font-size: 2rem;
+            background-color: #f1f1f1;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: rgb(164, 178, 192);
+            color: white;
+        }
+        
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+            background-color: rgba(100, 148, 237, 0.507);
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            font-size: 30px;
+            text-align: center;
+            /* background-color: #f1f1f1; */
+        }
+
+        .flex-item-left {
+            background-color: #f1f1f1;
+            padding: 10px;
+            flex: 50%;
+        }
+
+        .flex-item-right {
+            background-color: dodgerblue;
+            padding: 10px;
+            flex: 50%;
+        }
+        .gridbox{
+            width: 100%;
+            margin-top: 450px;
+            /* border: 3px solid #000; */
+            font-size: 2rem;
+            background-color: #f1f1f1;
+        }
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
+
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'header header header header header header'
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+          gap: 10px;
+          background-color:white;
+          padding: 10px;
+        }
+
+        .grid-container > div {
+          background-color: rgba(100, 148, 237, 0.507);
+          text-align: center;
+          padding: 20px 0;
+          font-size: 30px;
+        }
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
+        
+
+
+@media only screen and (min-width:521px) and (max-width: 950px){
+    .btn{
+        width: 30%;
+        margin-left: 35%;
+    }
+    .navbar{
+        float: left;
+        height: 80px;
+        /* padding: 0; */
+        background-color: rgba(128, 128, 128, 0.646);
+    }
+    .immg{
+        display: none;
+    }
+    .immg2{
+        display: block;
+        width: 70%;
+        border-radius: 20px;
+        padding-top: 40px;
+        margin-left: 12%;
+    }
+    .btn2{
+        width: 15%;
+        margin: 20px 0% 40px 13%;
+    }
+    .btn3{
+        width: 15%;
+        margin: 20px 0% 40px 38%;
+    }
+    .respflex{
+        display: none;
+    }
+    .flex-container{
+        display: none;
+    }
+    .gridbox{
+        margin-top: 0%;
+    }
+}
+@media only screen and (min-width:320px) and (max-width:520px){
+    body{
+        background: none;
+    }
+    .navbar{
+        width: 100%;
+        float: left;
+        /* border: 1px solid #000; */
+        padding: 0px;
+    }
+    /* .navbar ul{
+        
+        margin-left: 0px;
+    } */
+    .navbar ul li{
+        padding: 10px;
+        margin-top: 10px;
+        /* border: 1px solid #000; */
+    }
+     .navbar ul{
+        padding: 0%;
+     }
+    .navbar ul li a{
+        font-size: 1rem;
+    }
+    h1{
+        padding-top: 40px;
+        font-size: 2.5rem;
+    }
+    .btn{
+        margin: 0px 0px 10px 30%;
+        width: 37%;
+    }
+    .immg{
+        display: none;
+    }
+    .immg2{
+        margin-top: 20px;
+        border: 1px solid #000;
+        width: 100%;
+       display: block;
+    }
+    .btn2{
+        margin: 0%;
+        width: 30%;
+    }
+    .btn3{
+        margin: 20px 2%;
+        width: 30%;
+    }
+    .respflex{
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="https://discordapp.com/api/guilds/704231681309278228/widget.png?style=banner2" alt="">
+            <div class="navbar">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">VLOGS</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="masterhead">
+        <h1 style="text-align: center;">HELLO DEVELOPERS</h1>
+        <button type="submit" class="btn">JAVASCRIPT</button>
+    </div>
+    <div class="cards">
+        <div class="box">
+            <h2>CARD 1</h2>
+        </div>
+        <div class="box">
+            <h2>CARD 2</h2>
+        </div>
+        <div class="box">
+            <h2>CARD 3</h2>
+        </div>
+    </div>
+    <div id="main">
+        <img src="img/content box.png" class="immg" alt="">
+        <img src="img/SS1.png" class="immg2" alt="">
+        <img src="img/SS2.png" class="immg2" alt="">
+        <button type="submit" class="btn2">LOGIN</button>
+        <button type="submit" class="btn3">SignUp</button>
+    </div>
+   <div id="flexcheck">
+    <h1 style="text-align:center;background-color: rgba(128, 128, 128, 0.235); padding: 50px 0px;margin-bottom: 0px;">FLEX IMPLIMENTATION</h1>
+    <hr style="margin: 0%;">
+    <div class="flex">
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+        <p>Try to resize the browser window.</p>
+        <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+        <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+        <div class="respflex">
+            <h2>Responsive Flexbox</h2>
+            
+            <p>The "flex-direction: row;" stacks the flex items horizontally (from left to right).</p>
+            <p>The "flex-direction: column;" stacks the flex items vertically (from top to bottom).</p>
+            <p><b>Resize the browser window to see that the direction changes when the
+                    screen size is 800px wide or smaller.</b></p>
+        </div>
+        
+        <div class="flex-container">
+            <div class="flex-item-left">1</div>
+            <div class="flex-item-right">2</div>
+        </div>
+    </div>
+   </div>
+</div>
+   <div class="gridbox">
+    <center><h1>Grid Layout</h1></center>
+    <p>This grid layout contains six columns and three rows:</p>
+        <div class="grid-container">
+            <div class="item1">Header</div>
+            <div class="item2">Menu</div>
+            <div class="item3">Main</div>
+            <div class="item4">Right</div>
+            <div class="item5">Footer</div>
+        </div>
+   </div>
+
+</body>
+</html>
